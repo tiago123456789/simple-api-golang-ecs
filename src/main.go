@@ -27,6 +27,10 @@ func main() {
 		return c.JSON(data)
 	})
 
+	app.Get("/teste/teste", func(c *fiber.Ctx) error {
+		return c.SendString("Hello, World 👋!")
+	})
+
 	app.Listen(":" + port)
 
 }
